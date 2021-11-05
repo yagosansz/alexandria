@@ -1,13 +1,13 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.describe Author, type: :model do
-  context "associations" do
-    it { should have_many(:books) }
+  context "for associations" do
+    it { is_expected.to have_many(:books) }
   end
 
-  context "validations" do
-    it { should validate_presence_of(:given_name) }
-    it { should validate_presence_of(:family_name) }
+  context "for validations" do
+    it { is_expected.to validate_presence_of(:given_name) }
+    it { is_expected.to validate_presence_of(:family_name) }
   end
 
   it "has a valid factory" do
