@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2021_11_03_032325) do
     t.datetime "updated_at", null: false
     t.string "cover"
     t.index ["author_id"], name: "index_books_on_author_id"
-    t.index ["isbn_10"], name: "index_books_on_isbn_10"
-    t.index ["isbn_13"], name: "index_books_on_isbn_13"
+    t.index ["isbn_10"], name: "index_books_on_isbn_10", unique: true
+    t.index ["isbn_13"], name: "index_books_on_isbn_13", unique: true
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
     t.index ["title"], name: "index_books_on_title"
   end
