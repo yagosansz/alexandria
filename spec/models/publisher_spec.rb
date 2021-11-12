@@ -10,6 +10,7 @@ RSpec.describe Publisher, type: :model do
   end
 
   it "has a valid factory" do
-    expect(build(:publisher)).to be_valid
+    publisher = build(:publisher)
+    expect(publisher.valid?).to be true
   end
 end

@@ -11,6 +11,7 @@ RSpec.describe Author, type: :model do
   end
 
   it "has a valid factory" do
-    expect(build(:author)).to be_valid
+    author = build(:author)
+    expect(author.valid?).to be true
   end
 end

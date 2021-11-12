@@ -21,6 +21,7 @@ RSpec.describe Book, type: :model do
   end
 
   it "has a valid model" do
-    expect(build(:book)).to be_valid
+    book = build(:book)
+    expect(book.valid?).to be true
   end
 end
