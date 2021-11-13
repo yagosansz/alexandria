@@ -23,7 +23,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 
-  # Load Factory Girl methods
+  # Load Factory Bot methods
   config.include FactoryBot::Syntax::Methods
 
   # Configure Database Cleaner
